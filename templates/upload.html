@@ -1,0 +1,60 @@
+{% load static %}
+{% include 'header.html' %}
+
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Test
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action="upload" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+             
+              <div>
+                <input type="file" name="file" placeholder="Email" />
+              </div>
+             
+              <div class="btn_box">
+                <button type="submit">
+                  Test
+                </button>
+              </div>
+            </form>
+            {% if predicted_sign %}
+            <h2>Prediction :{{predicted_sign}}</h2>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form_container">
+              <form action="web_cam" method="post">
+                  {% csrf_token %}
+               
+               
+             <label for="">Click to open Cam</label>
+               
+                <div class="btn_box">
+                  <button type="submit">
+                    Test
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+      
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+
+ 
+
+{% include 'footer.html' %}
+ 

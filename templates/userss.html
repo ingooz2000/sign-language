@@ -1,0 +1,42 @@
+{% load static %}
+{% include 'header.html' %}
+
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Users
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <table border="1" style="width: 100%;">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                </tr>
+                {% for i in user %}
+                <tr>
+                    <td>{{i.name}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.password}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+
+ 
+
+{% include 'footer.html' %}
+ 

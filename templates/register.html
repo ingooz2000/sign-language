@@ -1,0 +1,47 @@
+{% load static %}
+{% include 'header.html' %}
+
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Register
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action="register" method="post">
+                {% csrf_token %}
+              <div>
+                <input type="text" name="name" placeholder="Your Name" />
+              </div>
+              
+              <div>
+                <input type="email" name="email" placeholder="Email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+              </div>
+              <div>
+                <input type="password" name="password" placeholder="Password" pattern=".{8,}" title="Password must be at least 8 characters long" required />
+
+              </div>
+              <div class="btn_box">
+                <button type="submit">
+                  REGISTER
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+
+ 
+
+{% include 'footer.html' %}
+ 

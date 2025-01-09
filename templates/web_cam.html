@@ -1,0 +1,38 @@
+{% load static %}
+{% include 'header.html' %}
+
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Test
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action="web_cam" method="post">
+                {% csrf_token %}
+             
+             
+              <div class="btn_box">
+                <button type="submit">
+                  Test
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+
+ 
+
+{% include 'footer.html' %}
+ 
